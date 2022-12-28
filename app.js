@@ -1,10 +1,43 @@
-const btn = document.getElementById('btn')
+const btn = document.querySelector('.btn')
 
 btn.addEventListener('click', function(){
-    let input = document.getElementById('input')
-    let task = document.querySelector('.div-tarefas')  
-    let div = document.createElement('div') // <==  .createElement() para criar nova div dentro da div de tasks (div-tarefas)
-    div.innerText = input.value // <== inserindo valor do input - (.value())
-    div.classList = 'task' // <== adicionando classe pre-definida a div criada
-    task.appendChild(div) // <== adicionando div criada na div principal como seu filho
+    const input = document.getElementById('input')
+    const task = document.querySelector('.div-tarefas')  
+    const div = document.createElement('div')
+    const createImgCheck = document.createElement('img')
+    const createImgTrash = document.createElement('img')
+
+        function criarDivTask(){
+            createImgTrash.src = 'icons/trash.png'
+            createImgCheck.src = 'icons/check.png'
+
+            createImgTrash.classList = 'img-task'
+            createImgCheck.classList = 'img-task'
+            div.classList = 'task'
+
+            div.innerHTML = '<p>' + input.value + '</p>'
+
+            div.appendChild(createImgCheck)
+            div.appendChild(createImgTrash)
+            task.appendChild(div)
+    }
+
+        function interatividadeTask (){
+        createImgCheck.addEventListener('click', function(){
+            if(div.style.textDecoration != 'line-through'){
+                div.style.textDecoration = 'line-through'
+            } else {
+                div.style.textDecoration = 'solid'
+            }
+        })
+    
+        createImgTrash.addEventListener('click', function(){
+            if (div.style.display != 'none'){
+                div.style.display = 'none'
+            }
+        })
+    }
+
+criarDivTask()
+interatividadeTask()
 })
