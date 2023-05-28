@@ -14,60 +14,70 @@ body{
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding: 2rem;
 }
 
 
 .div-principal{
     width: 30rem;
-    background-color: rgba(74, 152, 253, 0.726);
+    background-color: rgb(180, 230, 250);
     box-shadow: 0px 10px 31px -12px rgba(0,0,0,0.59);
-    padding: 4rem;
+    padding: 2rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .div-principal h1{
+    width: 100%;
     text-align: center;
+    color: rgb(0, 107, 107);
+    font-weight: 400;
 }
 
 input{
-    width: 80%;
+    width: 20rem;
     height: 2.5rem;
     border: none;
-    border-radius: .3rem 0px 0px .3rem ;
 }
 
 .btn{
     border: 0;
-    width: 18%;
+    width: 2.5rem;
     height: 2.5rem;
-    border-radius: 0rem 0.3rem 0.3rem 0rem ;
     background-color: rgb(69, 250, 69);
     color: rgb(0, 83, 11);
     font-weight: 600;
     font-size: 1rem;
-}
-
-.add-tarefa{
-    margin-bottom: 4rem;
-    box-shadow: 0px 10px 31px -12px rgba(0,0,0,0.59);
+    border: 1px solid rgb(0, 83, 11);
 }
 
 .div-tarefas{
-    width: 100%;
+    background-color: white;
+    width: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
 }
 
 .task{
-    width: 100%;
+    width: 20rem;
     height: 2.5rem;
     background-color: white;
-    border-radius: 2rem;
     padding: 0.5rem;
     display: flex;
     align-items: center;
     box-shadow: 0px 10px 31px -12px rgba(0,0,0,0.59);
     font-weight: 600;
     border: 1px solid black;
+    color: black;
 }
 
 .task p {
@@ -80,11 +90,19 @@ input{
 }
 
 .img-task{
-    width: 2rem;
+    width: 1.8rem;
     background-color: rgba(74, 152, 253, 0.726);
     margin-left: 0.3rem;
-    border-radius: 1rem;
-    padding: .2rem;
+    border-radius: .3rem;
+    padding: .4rem;
     cursor: pointer;
 }
 
+.img-task-trash{
+    width: 1.8rem;
+    background-color: rgba(241, 28, 0, 0.932);
+    margin-left: 0.3rem;
+    border-radius: .3rem;
+    padding: .2rem;
+    cursor: pointer;
+}
